@@ -1,0 +1,11 @@
+<p>FORM</p>
+
+<form action="">
+    <label for="">Car name</label>
+    <input type="text" name="carname" id="" [(ngModel)]="carname">
+    <button type="submit" (click)="addCar()">Submit</button>
+</form>
+
+<input type="text" [(ngModel)]="suma">
+
+<app-list [carsInput]="car" [sumatext]="suma"></app-list>

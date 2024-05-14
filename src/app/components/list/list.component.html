@@ -1,0 +1,17 @@
+<p>list works! {{sumada}}</p>
+<div *ngIf="car.length>0; then carlist; else noData">
+
+</div>
+
+<ng-template #carlist>
+    <ul>
+        <li *ngFor="let e of car">{{e}}</li>
+    </ul>
+</ng-template>
+
+@if(car.length>0){
+    {{car.length}}
+}
+<ng-template #noData>
+    <p>No cars Available</p>
+</ng-template>

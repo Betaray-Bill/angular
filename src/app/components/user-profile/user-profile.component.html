@@ -1,0 +1,33 @@
+<!-- @for - iterate -->
+<!-- @if - conditions -->
+<!-- <h2>User PRofile</h2>
+<input type="text" [(ngModel)]="name">
+<p>{{name   }}</p>
+
+<div>
+    @for (item of user; track $index) {
+        @if(item.salary>1000){
+            <h3>{{1+$index}} . {{item.name}}</h3>
+            <p>Status : {{item.isSingle ? "Single" : "Married"}}</p>
+        }@else {
+            <p>Suma</p>
+        }
+    }
+</div>
+
+<hr>
+
+
+<div *ngFor="let i of user">
+    <p *ngIf="i.salary > 1000, then printSal"></p>
+    <ng-template #printSal>
+        <p>{{i.name}}</p>
+    </ng-template>
+    <ng-template #notprintSal>
+        <p>Not needed</p>
+    </ng-template>
+</div> -->
+
+<h1>{{name}} - {{salary}}</h1>
+
+<button (click)="sendToParent()">click</button>

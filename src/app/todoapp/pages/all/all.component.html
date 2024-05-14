@@ -1,0 +1,25 @@
+<h2 class="font-bold text-xl">Day</h2>
+    <div class="text-blue-500">
+        <span >{{date | date }}</span>
+    </div>
+
+    <div class="flex">
+        <input type="text" class="w-full p-4 rounded shadow py-2 mt-4" 
+            name="" placeholder="type task" id=""
+            [(ngModel)]="newtask"
+            (keydown.enter)="addtask()"
+        >
+    </div>
+    @for (item of tasks; track $index) {
+        <div class="flex mt-6 align-middle flex-col bg-white rounded p-2">
+            <h2 class="font-bold text-xl">
+                Task {{$index+1}}
+            </h2>
+            <p class=" flex flex-col h-16 w-full py-2 rounded text-left">{{item.title}}</p>   
+            @if(item.imp){
+                <p class="text-green-600">imp</p>
+            }@else {
+                <p class="text-red-600" (click)="important(item)">not imp</p>
+            }     
+        </div>
+    }

@@ -1,0 +1,15 @@
+.even{
+    background-color: antiquewhite;
+}
+
+.odd{
+    background-color: cornflowerblue;
+}
+
+.last{
+    color: pink;
+}
+
+.primary{
+    color: red;
+}
